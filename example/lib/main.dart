@@ -1,12 +1,11 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:google_api_headers/google_api_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_google_places/flutter_google_places.dart';
 import 'package:google_maps_webservice/places.dart';
 
-const kGoogleApiKey = "API_KEY";
+const kGoogleApiKey = "AIzaSyB3hTj-9Le3_3LJRD0DaGAytC2Lk8tNjyE";
 
 main() {
   runApp(RoutesWidget());
@@ -97,9 +96,10 @@ class _MyAppState extends State<MyApp> {
       );
 
   void onError(PlacesAutocompleteResponse response) {
-    homeScaffoldKey.currentState.showSnackBar(
-      SnackBar(content: Text(response.errorMessage)),
-    );
+    // homeScaffoldKey.currentState.showSnackBar(
+    //   SnackBar(content: Text(response.errorMessage)),
+    // );
+    print(response.errorMessage);
   }
 
   Future<void> _handlePressButton() async {
